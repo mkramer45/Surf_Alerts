@@ -91,3 +91,6 @@ Due to the function containing our web scraping logic being wrapped with try/exc
 >>Scituate Wave Height: No Data Available
 ```
 Although we aren't able to get any data, the script is still able to be executed without any fatal errors that result in the script crashing, which is what we want.
+
+# Author
+This software package was created by Mike Kramer. For any questions/feedback/collaboration inquiries, please send emails mkramer789@gmail.com
