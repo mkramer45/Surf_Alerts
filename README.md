@@ -30,7 +30,7 @@ Lastly, you will need the SurfSender package itself. Simply download it from thi
 
 # Getting started
 
-Before running any of the files in the SurfSender package, we need to first get the Zookeeper & Kafka servers running. To do this, enter the following commands in a new instance of a terminal. We will first focus on Zookeeper.
+Before running any of the files in the SurfSender package, we need to first get the Zookeeper & Kafka servers running. For additional information on these items, their documentation serves as a great resource (https://kafka.apache.org/). To get both of these running, enter the following commands in a new instance of a terminal. We will first focus on Zookeeper.
 
 With a fresh terminal window, navigate to the directory where your Apache Kafka package is stored. For example, in my case, I have it saved in my downloads directory (/Users/mike/Downloads). Once you've landed in the package's directory, run the following command to start Zookeeper:
 
