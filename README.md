@@ -79,3 +79,15 @@ While remaining in the SurfSender package directory in your terminal, execute th
 
 Upon executing this file, you should see the messages from the topic displayed in your terminal. Additionally, you are now able to query these messages in the SurfSender database table named 'surf_data' in PostgreSQL.
 
+# Testing SurfSender
+
+Given the nature of the program, one of the important areas we should test is our data source. In the event that a webpage in our URL list goes down or the formatting of the contents we are scraping changes, we need to be able that our script is still able to execute in it's entirety, despite such a mishap with our data source.
+
+In the test directory, I've updated the 'producer_surf_info.py' file to include an invalid URL ( changed 'https://magicseaweed.com/Scituate-Surf-Report/372/' to ''https://magicseaweed.com/Scituate-Su1234rf-Report/372/'. If you were to load ''https://magicseaweed.com/Scituate-Su1234rf-Report/372/' in a web browser, you will receive a 404: page not found error.
+
+Due to the function containing our web scraping logic being wrapped with try/except clauses, we see that the script is still able to run until completion, but the data for this message is displayed as:
+
+```
+>>Scituate Wave Height: No Data Available
+```
+Although we aren't able to get any data, the script is still able to be executed without any fatal errors that result in the script crashing, which is what we want.
